@@ -92,13 +92,39 @@ npm run start:dev
 
 ---
 
-## 📬 Rotas Principais
+## 📬 Rotas da API
 
-- `POST /auth/signup` → Cadastro de usuário
-- `POST /auth/login` → Login com geração de token
-- `GET /profile` → Perfil do usuário autenticado
+### 🔐 AuthController (`/auth`)
+| Método | Rota       | Descrição                 |
+|--------|------------|---------------------------|
+| POST   | `/login`   | Login e geração de token  |
 
 ---
+
+### 👤 UsuariosController (`/usuarios`)
+| Método | Rota       | Descrição                         |
+|--------|------------|-------------------------------------|
+| POST   | `/`        | Cadastro de novo usuário           |
+
+---
+
+### 🚗 VeiculosController (`/veiculos`)
+| Método | Rota              | Descrição                         |
+|--------|-------------------|-------------------------------------|
+| POST   | `/`               | Cadastrar novo veículo             |
+| GET    | `/`               | Listar todos os veículos           |
+| GET    | `/:id`            | Obter detalhes de um veículo       |
+| PUT    | `/:id`            | Atualizar dados de um veículo      |
+| DELETE | `/:id`            | Remover veículo                    |
+| POST   | `/upload`         | Upload de imagem/documento         |
+
+---
+
+### 🧠 IaController (`/ia`)
+| Método | Rota         | Descrição                             |
+|--------|--------------|-----------------------------------------|
+| POST   | `/sugerir`   | Retorna sugestão com base nos dados via IA |
+
 
 ## 📄 Licença
 
