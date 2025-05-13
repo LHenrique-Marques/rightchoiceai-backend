@@ -1,158 +1,132 @@
+# 🚗 Right Choice Ai
 
-<p align="center">
-  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
-</p>
+Este é o backend do projeto **RightChoiceAI**, desenvolvido por **Luis Henrique Marques Franque Flores** como parte de um projeto acadêmico da graduação em Análise e Desenvolvimento de Sistemas (UNISENAC).
 
-<p align="center">
-  <b>RightChoiceAI — Backend</b><br>
-  Projeto acadêmico UNISENAC - Concessionária com Inteligência Artificial<br>
-  Desenvolvido com <a href="https://nestjs.com/" target="_blank">NestJS</a> e <a href="https://www.prisma.io/" target="_blank">Prisma</a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="Versão NPM" />
-  <img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Licença" />
-  <img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="Downloads" />
-</p>
+A API foi construída utilizando as melhores práticas de desenvolvimento, com foco em escalabilidade, modularização e segurança.
 
 ---
 
-## 📘 Descrição
+## 🧰 Tecnologias Utilizadas
 
-Este projeto faz parte do sistema **RightChoiceAI**, uma solução moderna para revenda de veículos com integração de Inteligência Artificial (LangChain via FastAPI).
+### Principais:
+- **@nestjs/common**
+- **@nestjs/config**
+- **@nestjs/core**
+- **@nestjs/jwt**
+- **@nestjs/mapped-types**
+- **@nestjs/passport**
+- **@nestjs/platform-express**
+- **@nestjs/serve-static**
+- **@prisma/client**
+- **@types/uuid**
+- **class-transformer**
+- **class-validator**
+- **cors**
+- **jsonwebtoken**
+- **multer**
+- **mysql2**
+- **passport**
+- **passport-jwt**
+- **reflect-metadata**
+- **rxjs**
+- **swagger-ui**
+- **uuid**
 
-O backend é responsável por autenticação de usuários, cadastro e gestão de veículos, envio de arquivos (como imagens e documentos) e conexão com um microserviço de IA.
-
----
-
-## 🚀 Tecnologias
-
-- NestJS
-- TypeScript
-- MySQL
-- Prisma ORM
-- JWT (autenticação)
-- Multer (upload de arquivos)
-- Class-validator (validação)
-
----
-
-## 📁 Funcionalidades
-
-- ✅ Cadastro e login de usuários com hash e JWT
-- ✅ CRUD completo de veículos
-- ✅ Upload de arquivos com Multer
-- ✅ Servidor de arquivos estáticos (`/uploads`)
-- ✅ Validação de entrada com DTOs
-- ✅ Integração futura com IA (endpoint pronto)
-
----
-
-## 🔧 Instalação e uso
-
-### 1. Clone o projeto
-```bash
-git clone https://github.com/Ceratt1/RightChoiceAI.git
-cd RightChoiceAI/backend
-```
-
-### 2. Instale as dependências
-```bash
-yarn install
-```
-
-### 3. Configure o ambiente `.env`
-```env
-DATABASE_URL="mysql://usuario:senha@localhost:3306/right_choice_db"
-JWT_SECRET="sua_chave_secreta"
-```
-
-### 4. Rode as migrations
-```bash
-npx prisma migrate dev
-```
-
-### 5. Execute o servidor
-```bash
-yarn start:dev
-```
+### Desenvolvimento:
+- @nestjs/cli
+- @nestjs/schematics
+- @nestjs/testing
+- @types/express
+- @types/jest
+- @types/multer
+- @types/node
+- @types/passport-jwt
+- @types/supertest
+- @typescript-eslint/eslint-plugin
+- @typescript-eslint/parser
+- eslint
+- eslint-config-prettier
+- eslint-plugin-prettier
+- express
+- jest
+- prettier
+- prisma
+- source-map-support
+- supertest
+- ts-jest
+- ts-loader
+- ts-node
+- tsconfig-paths
+- typescript
 
 ---
 
-## 📤 Upload de Arquivos
-
-### Endpoint
-```
-POST /veiculos/upload
-```
-
-### Exemplo de resposta:
-```json
-{
-  "mensagem": "Arquivo recebido com sucesso!",
-  "caminho": "/uploads/file-171528123.png"
-}
-```
-
----
-
-## 🔐 Autenticação
-
-- `POST /auth/login` → retorna um token JWT
-- Use o token nas rotas protegidas via header:
-
-```
-Authorization: Bearer <access_token>
-```
-
----
-
-## 🤖 Integração com IA
-
-### Endpoint preparado:
-```
-POST /ia/sugerir
-```
-
-Aceita informações como perfil, orçamento e preferências. Em produção, isso será redirecionado para um microserviço Python com FastAPI + LangChain.
-
----
-
-## 🧪 Scripts de Teste
-
-```bash
-# testes unitários
-yarn test
-
-# testes e2e
-yarn test:e2e
-
-# cobertura
-yarn test:cov
-```
-
----
-
-## 📂 Organização
+## 📁 Estrutura do Projeto
 
 ```
 src/
-├── auth/         # Login e JWT
-├── usuarios/     # Usuários e cadastro
-├── veiculos/     # CRUD de veículos e upload
-├── ia/           # Integração com IA
-├── infra/        # Prisma e banco
-└── main.ts       # Bootstrap
+├── auth/               # Módulo de autenticação (JWT)
+├── prisma/             # Serviço de integração com o Prisma
+├── veiculos/           # CRUD e lógica de veículos
+├── app.module.ts
+├── main.ts
+```
+
+Outros arquivos:
+- `.env` e `.env.example`: variáveis de ambiente
+- `prisma/schema.prisma`: definição dos modelos de banco de dados
+- `package.json`: gerenciamento de dependências
+- `tsconfig.json`: configuração do TypeScript
+
+---
+
+## ⚙️ Como Rodar o Projeto Localmente
+
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/LHenrique-Marques/rightchoiceai-backend.git
+cd rightchoiceai-backend
+```
+
+2. **Instale as dependências:**
+```bash
+npm install
+```
+
+3. **Configure o ambiente**
+Crie um arquivo `.env` baseado em `.env.example`:
+
+```
+DATABASE_URL="mysql://root:210922@localhost:3306/right_choice_db"
+```
+
+4. **Rode as migrações com Prisma:**
+```bash
+npx prisma migrate dev --name init
+```
+
+5. **Inicie a aplicação:**
+```bash
+npm run start:dev
 ```
 
 ---
 
-## 👨‍🏫 Projeto Acadêmico
+## 🔐 Funcionalidades
 
-Este backend foi desenvolvido como parte do projeto **RightChoiceAI** no curso de Análise e Desenvolvimento de Sistemas do UniSenac — Campus Porto Alegre.
+- ✅ Autenticação com JWT
+- ✅ Upload de arquivos com Multer
+- ✅ Integração com PostgreSQL
+- ✅ Estrutura em módulos com NestJS
+- ✅ DTOs para validação de dados
+- ✅ Prisma ORM com migração automática
 
 ---
 
 ## 📄 Licença
 
-Licenciado sob [MIT](https://opensource.org/licenses/MIT)
+Este projeto foi desenvolvido para fins acadêmicos e pode ser utilizado livremente com os devidos créditos.
+
+---
+
+Desenvolvido com ❤️ por [Luis Henrique Marques Franque Flores](https://www.linkedin.com/in/luis-henrique-marques-franque-flores-508ba126b/)
