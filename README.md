@@ -31,8 +31,11 @@ A API foi construída utilizando as melhores práticas de desenvolvimento, com f
 ```
 src/
 ├── auth/               # Módulo de autenticação (JWT)
+├── ia/                # Integração e lógica de Inteligência Artificial
+├── infra/             # Serviços utilitários e suporte da aplicação
 ├── prisma/             # Serviço de integração com o Prisma
 ├── veiculos/           # CRUD e lógica de veículos
+├── users/             # Cadastro e gestão de usuários
 ├── app.module.ts
 ├── main.ts
 ```
@@ -79,12 +82,21 @@ npm run start:dev
 
 ## 🔐 Funcionalidades
 
+- ✅ Cadastro e login de usuários com criptografia de senha
 - ✅ Autenticação com JWT
 - ✅ Upload de arquivos com Multer
 - ✅ Integração com PostgreSQL
 - ✅ Estrutura em módulos com NestJS
 - ✅ DTOs para validação de dados
 - ✅ Prisma ORM com migração automática
+
+---
+
+## 📬 Rotas Principais
+
+- `POST /auth/signup` → Cadastro de usuário
+- `POST /auth/login` → Login com geração de token
+- `GET /profile` → Perfil do usuário autenticado
 
 ---
 
