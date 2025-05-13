@@ -7,59 +7,24 @@ A API foi construída utilizando as melhores práticas de desenvolvimento, com f
 ---
 
 ## 🧰 Tecnologias Utilizadas
+| Categoria        | Tecnologias                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------ |
+| **Framework**    | [NestJS](https://nestjs.com/), [TypeScript](https://www.typescriptlang.org/)               |
+| **ORM & Banco**  | [Prisma](https://www.prisma.io/), [PostgreSQL](https://www.postgresql.org/)                |
+| **Autenticação** | [JWT](https://jwt.io/), [Passport](http://www.passportjs.org/)                             |
+| **Validação**    | `class-validator`, `class-transformer`                                                     |
+| **Upload**       | [Multer](https://github.com/expressjs/multer)                                              |
+| **Ambiente**     | [Dotenv](https://www.npmjs.com/package/dotenv), [CORS](https://www.npmjs.com/package/cors) |
+| **Execução**     | `ts-node`, `tsconfig-paths`, `reflect-metadata`, `rxjs`                                    |
 
-### Principais:
-- **@nestjs/common**
-- **@nestjs/config**
-- **@nestjs/core**
-- **@nestjs/jwt**
-- **@nestjs/mapped-types**
-- **@nestjs/passport**
-- **@nestjs/platform-express**
-- **@nestjs/serve-static**
-- **@prisma/client**
-- **@types/uuid**
-- **class-transformer**
-- **class-validator**
-- **cors**
-- **jsonwebtoken**
-- **multer**
-- **mysql2**
-- **passport**
-- **passport-jwt**
-- **reflect-metadata**
-- **rxjs**
-- **swagger-ui**
-- **uuid**
+### ⚙️ Ferramentas de Desenvolvimento:
+| Tipo              | Tecnologias                                      |
+| ----------------- | ------------------------------------------------ |
+| **CLI & Scripts** | `@nestjs/cli`, `prisma`, `ts-node`, `ts-loader`  |
+| **Testes**        | `jest`, `supertest`, `@nestjs/testing` (se usar) |
+| **Lint & Format** | `eslint`, `prettier`, `@typescript-eslint/*`     |
+| **Tipos**         | `@types/*`                                       |
 
-### Desenvolvimento:
-- @nestjs/cli
-- @nestjs/schematics
-- @nestjs/testing
-- @types/express
-- @types/jest
-- @types/multer
-- @types/node
-- @types/passport-jwt
-- @types/supertest
-- @typescript-eslint/eslint-plugin
-- @typescript-eslint/parser
-- eslint
-- eslint-config-prettier
-- eslint-plugin-prettier
-- express
-- jest
-- prettier
-- prisma
-- source-map-support
-- supertest
-- ts-jest
-- ts-loader
-- ts-node
-- tsconfig-paths
-- typescript
-
----
 
 ## 📁 Estrutura do Projeto
 
