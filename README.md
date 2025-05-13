@@ -21,7 +21,7 @@ A API foi construída utilizando as melhores práticas de desenvolvimento, com f
 | Tipo              | Tecnologias                                      |
 | ----------------- | ------------------------------------------------ |
 | **CLI & Scripts** | `@nestjs/cli`, `prisma`, `ts-node`, `ts-loader`  |
-| **Testes**        | `jest`, `supertest`, `@nestjs/testing` (se usar) |
+| **Testes**        | `jest`, `supertest`, `@nestjs/testing`           |
 | **Lint & Format** | `eslint`, `prettier`, `@typescript-eslint/*`     |
 | **Tipos**         | `@types/*`                                       |
 
