@@ -106,4 +106,4 @@ Este projeto foi desenvolvido para fins acadêmicos e pode ser utilizado livreme
 
 ---
 
-Desenvolvido com ❤️ por [Luis Henrique Marques Franque Flores](https://www.linkedin.com/in/luis-henrique-marques-franque-flores-508ba126b/)
+Desenvolvido por [Luis Henrique Marques Franque Flores](https://www.linkedin.com/in/luis-henrique-marques-franque-flores-508ba126b/)
